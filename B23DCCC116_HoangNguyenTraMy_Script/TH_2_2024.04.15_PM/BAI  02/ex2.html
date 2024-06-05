@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAI 02</title>
+</head>
+<body>
+
+    <script>
+        //Hàm tìm số nguyên lớn nhất trong mảng
+        function tim_Max(arr) {
+            let maxNum = arr.length > 0 ? arr[0] : null;
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] > maxNum) {
+                    maxNum = arr[i];
+                }
+            }
+            return maxNum;
+        }
+        //Hàm tìm các số chính phương trong mảng
+        function tim_so_chinh_phuong(arr) {
+            return arr.filter(num => num >= 0 && Math.sqrt(num) % 1 === 0);
+        }
+        // Hàm tìm các số lớn hơn trung bình cộng của mảng
+        function findNumbersAboveAverage(arr) {
+            const average = arr.reduce((acc, curr) => acc + curr, 0) / arr.length;
+            return arr.filter(num => num > average);
+        }
+        // Hàm tính trung bình cộng của các số không âm trong mảng
+        function calculateNonNegativeAverage(arr) {
+            const nonNegativeNums = arr.filter(num => num >= 0);
+            return nonNegativeNums.length > 0 ? nonNegativeNums.reduce((acc, curr) => acc + curr, 0) / nonNegativeNums.length : null;
+        }
+
+        // Mảng các số nguyên
+        const array = [4, 5, 7, 15, 18, 25, 36];
+
+        // Hiển thị kết quả
+        document.write("<p>Số nguyên lớn nhất trong mảng: " + tim_Max(array) + "</p>");
+        document.write("<p>Các số chính phương trong mảng: " + tim_so_chinh_phuong(array) + "</p>");
+        document.write("<p>Các số lớn hơn trung bình cộng của mảng: " + findNumbersAboveAverage(array) + "</p>");
+        document.write("<p>Trung bình cộng của các số không âm trong mảng: " + calculateNonNegativeAverage(array) + "</p>");
+    </script>
+</body>
+</html>

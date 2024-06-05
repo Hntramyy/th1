@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Array Operations</title>
+</head>
+<body>
+<script>
+  // Tạo mảng số nguyên ngẫu nhiên
+  var so_nguyen_ngau_nhien= [];
+  var size = 15;
+  var minVal = 2;
+  var maxVal = 25;
+
+  for (var i = 0; i < size; i++) {
+    so_nguyen_ngau_nhien.push(Math.floor(Math.random() * (maxVal - minVal + 1)) + minVal);
+  }
+
+  // Sắp xếp mảng theo thứ tự tăng dần
+  var sap_xep = so_nguyen_ngau_nhien.slice().sort(function (a, b)  {
+    return a - b;
+  });
+
+  // Loại bỏ các phần tử trùng nhau
+  var loai_bo = so_nguyen_ngau_nhien.filter((value, index, self) => self.indexOf(value) === index);
+
+  // In ra kết quả
+  document.write("<p>Mảng số nguyên ngẫu nhiên: " + so_nguyen_ngau_nhien + "</p>");
+  document.write("<p>Mảng sau khi sắp xếp: " + sap_xep + "</p>");
+  document.write("<p>Mảng sau khi loại bỏ các phần tử trùng nhau: " + loai_bo + "</p>");
+</script>
+</body>
+</html>
+

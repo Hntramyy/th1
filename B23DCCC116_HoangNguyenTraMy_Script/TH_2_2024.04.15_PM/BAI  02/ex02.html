@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Integer Array</title>
+</head>
+<body>
+<script>
+// Khởi tạo mảng số nguyên
+var mang = [3, 8, 15, 21, 30, 45, 50, 60, 75];
+
+// Hàm tìm số nguyên lớn nhất trong mảng
+function tim_Max(arr) {
+    var max = arr[0];
+    for (var i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+// Hàm kiểm tra xem một số có phải là số chính phương không
+function kt_so_chinh_phuong(num) {
+    // Nếu căn bậc hai của số đó là một số nguyên, tức là nó là số chính phương
+    return Math.sqrt(num) % 1 === 0;
+}
+// Hàm tìm các số chính phương trong mảng
+function tim_so_chinh_phuong(arr) {
+    var so_chinh_phuong = [];
+    for (var i = 0; i < arr.length; i++) {
+        if (kt_so_chinh_phuong(arr[i])) {
+            so_chinh_phuong.push(arr[i]);
+        }
+    }
+    return so_chinh_phuong; 
+}
+
+// In ra kết quả
+document.write("Số nguyên lớn nhất trong mảng: " + tim_Max(mang));
+document.write("các số chính phương trong mảng: " + tim_so_chinh_phuong(mang));
+</script>
+
+</body>
+</html>
