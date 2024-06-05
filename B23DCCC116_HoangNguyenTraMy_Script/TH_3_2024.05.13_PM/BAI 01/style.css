@@ -1,0 +1,21 @@
+html,body{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+.box {
+    
+    border: 1px solid black; /* Đặt độ rộng và màu sắc cho khung */
+   
+    width: 300px;
+    height: 120px;
+}
+
+
+
+button{
+    border: 1px solid rgb(19, 18, 18);
+    background-color:  rgb(179, 179, 179);
+    
+}

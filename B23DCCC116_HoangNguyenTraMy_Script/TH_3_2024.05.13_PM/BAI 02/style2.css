@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.box2 {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+button{
+    display:flex;
+}
+#newItemInput {
+    margin-bottom: 20px;
+    padding: 5px; 
+    border : 1px solid #979797;
+    border-radius: 3px;
+
+}
